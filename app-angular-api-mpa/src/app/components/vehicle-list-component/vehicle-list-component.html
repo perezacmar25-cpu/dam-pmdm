@@ -1,0 +1,7 @@
+<div class="row">
+  @for (v of vehicles(); track v.url) {
+    <div class="col-md-4 mb-3">
+      <app-vehicle-item-component [vehicle]="v"></app-vehicle-item-component>
+    </div>
+  }
+</div>
