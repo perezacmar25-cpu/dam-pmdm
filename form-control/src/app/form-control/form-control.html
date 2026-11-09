@@ -1,0 +1,52 @@
+<main class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-10 col-xl-9">
+            <section class="card border-0 shadow-sm">
+                <div class="card-body p-4 p-md-5">
+                    <div class="mb-4">
+                        <span class="badge text-bg-primary mb-3">NUEVA PUBLICACIÓN</span>
+                        <h1 class="h2 mb-2">Crea tu contenido</h1>
+                        <p class="text-secondary mb-0">Completa los datos para preparar tu publicación.</p>
+                    </div>
+
+                    <form class="row g-3" (ngSubmit)="onSubmit()">
+                        <div class="col-12 col-md-6">
+                            <label class="form-label fw-semibold" for="title">Título</label>
+                            <input class="form-control" id="title" [formControl]="titleControl" placeholder="Ej. Ideas para este verano" required>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <label class="form-label fw-semibold" for="category">Categoría</label>
+                            <input class="form-control" id="category" [formControl]="categoryControl" placeholder="Ej. Estilo de vida" required>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label fw-semibold" for="description">Descripción</label>
+                            <textarea class="form-control" id="description" [formControl]="descriptionControl" rows="3" placeholder="Cuéntanos de qué trata tu publicación" required></textarea>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <label class="form-label fw-semibold" for="etiquetas">Etiquetas</label>
+                            <input class="form-control" id="etiquetas" [formControl]="etiquetasControl" placeholder="Ej. consejos, inspiración" required>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <label class="form-label fw-semibold" for="email">Correo electrónico</label>
+                            <input class="form-control" id="email" type="email" [formControl]="emailControl" placeholder="nombre@correo.com" required>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label fw-semibold" for="publicacion">Fecha de publicación</label>
+                            <input class="form-control" id="publicacion" type="date" [formControl]="publicacionControl" required>
+                        </div>
+
+                        <div class="col-12 d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-3 pt-2">
+                            <p class="small text-secondary mb-0">Todos los campos son obligatorios.</p>
+                            <button class="btn btn-primary px-4" type="submit">Enviar publicación</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
