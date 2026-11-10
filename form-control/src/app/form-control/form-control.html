@@ -9,35 +9,35 @@
                         <p class="text-secondary mb-0">Completa los datos para preparar tu publicación.</p>
                     </div>
 
-                    <form class="row g-3" (ngSubmit)="onSubmit()">
+                    <form class="row g-3" [formGroup]="profileForm"(ngSubmit)="onSubmit()">
                         <div class="col-12 col-md-6">
                             <label class="form-label fw-semibold" for="title">Título</label>
-                            <input class="form-control" id="title" [formControl]="titleControl" placeholder="Ej. Ideas para este verano" required>
+                            <input class="form-control" id="title" formControlName="titleControl" placeholder="Ej. Ideas para este verano" required>
                         </div>
 
                         <div class="col-12 col-md-6">
                             <label class="form-label fw-semibold" for="category">Categoría</label>
-                            <input class="form-control" id="category" [formControl]="categoryControl" placeholder="Ej. Estilo de vida" required>
+                            <input class="form-control" id="category" formControlName="categoryControl" placeholder="Ej. Estilo de vida" required>
                         </div>
 
                         <div class="col-12">
                             <label class="form-label fw-semibold" for="description">Descripción</label>
-                            <textarea class="form-control" id="description" [formControl]="descriptionControl" rows="3" placeholder="Cuéntanos de qué trata tu publicación" required></textarea>
+                            <textarea class="form-control" id="description" formControlName="descriptionControl" rows="3" placeholder="Cuéntanos de qué trata tu publicación" required></textarea>
                         </div>
 
                         <div class="col-12 col-md-6">
                             <label class="form-label fw-semibold" for="etiquetas">Etiquetas</label>
-                            <input class="form-control" id="etiquetas" [formControl]="etiquetasControl" placeholder="Ej. consejos, inspiración" required>
+                            <input class="form-control" id="etiquetas" formControlName="etiquetasControl" placeholder="Ej. consejos, inspiración" required>
                         </div>
 
                         <div class="col-12 col-md-6">
                             <label class="form-label fw-semibold" for="email">Correo electrónico</label>
-                            <input class="form-control" id="email" type="email" [formControl]="emailControl" placeholder="nombre@correo.com" required>
+                            <input class="form-control" id="email" type="email" formControlName="emailControl" placeholder="nombre@correo.com" required>
                         </div>
 
                         <div class="col-12">
                             <label class="form-label fw-semibold" for="publicacion">Fecha de publicación</label>
-                            <input class="form-control" id="publicacion" type="date" [formControl]="publicacionControl" required>
+                            <input class="form-control" id="publicacion" type="date" formControlName="publicacionControl" required>
                         </div>
 
                         <div class="col-12 d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-3 pt-2">
